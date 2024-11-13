@@ -1,0 +1,6 @@
+[12-Nov-2024 19:36:01 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Log" not found in C:\nginx\nginx\www\seneme.dev\Laravel\Side Proj\WebBasedJobRunner\background_script.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\nginx\nginx\www\seneme.dev\Laravel\Side Proj\WebBasedJobRunner\background_script.php on line 8
+[12-Nov-2024 20:24:09 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\nginx\nginx\www\seneme.dev\Laravel\Side Proj\WebBasedJobRunner\app\Helpers\helpers.php on line 16
+[12-Nov-2024 20:24:09 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\nginx\nginx\www\seneme.dev\Laravel\Side Proj\WebBasedJobRunner\app\Helpers\helpers.php on line 16
