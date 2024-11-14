@@ -39,6 +39,7 @@ Another file called "background_jobs_errors.log" will log errors from the comman
 
 play with the below command 👇\
 php artisan background:job "App\Jobs\TestJob" "performTask" '{"param1":"value1", "param2":"value2"}' 3\
+Alternatively go to windows task scheduler / linux cron job (use the same command at the top) set a time interval of 5 , 6 or 10 min to run this task automatically.
 
 (To run the background_script.php) - paste below in your cmd 👇\
 php background_script.php
