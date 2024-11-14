@@ -17,7 +17,7 @@ It will log the results and parameters on laravels build in log file within stor
 ![Screenshot-screenshoot-number-one](https://github.com/user-attachments/assets/e29edcec-162c-4ef1-885e-73f63af14935)
 
 ## task 2 
-This task is complete. I created a helper class / function that is called <i>runBackgroundJob</i> , it executes in the background. Use the below command to test\
+This task is complete. I created a helper class / function that is called <i>runBackgroundJob</i> , it executes in the background. Use the below command to test
 
 php artisan background:job "App\Jobs\TestJob" "performTask" '{"param1":"value1", "param2":"value2"}' 3 
 
