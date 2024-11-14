@@ -14,6 +14,7 @@ All you need to do is:
 php background_script.php
 
 It will log the results and parameters on laravels build in log file within storage.It logs successfully. Try it out 😊
+![Screenshot-screenshoot-number-one](https://github.com/user-attachments/assets/e29edcec-162c-4ef1-885e-73f63af14935)
 
 ## task 2 
 This task is complete. I created a a helper class / function that is called <i>runBackgroundJob</i> , it executes in the background. Use the below command to test.\
@@ -24,10 +25,13 @@ php artisan background:job "App\Jobs\TestJob" "performTask" '{"param1":"value1",
 
 I create a separate log file using Laravels "log::channel" it successfully logs the error on the  background_jobs_errors\
 The check is being done. Logs status and timestamped.
+![Screenshot-jobstarted-maxattempts-hit](https://github.com/user-attachments/assets/c571fad3-b0cd-417e-b6da-126141fde372)
 
 ## task 4 (Security Requirements)
 If unauthorized attempts to run a job are detected, we log them immediately and throw an exception without executing the job\
 I have a <i>App\Jobs\TestJob </i> with the performTask method in <B>config/background_jobs.php</b>
+![Screenshot-throwsexception-becoz-wrong-method](https://github.com/user-attachments/assets/eba92ed7-06ed-4d62-bfd6-86e04feec640)
+
 
 ## more on usage 👨‍🏫
 
@@ -40,6 +44,7 @@ Another file called "background_jobs_errors.log" will log errors from the comman
 play with the below command 👇\
 php artisan background:job "App\Jobs\TestJob" "performTask" '{"param1":"value1", "param2":"value2"}' 3\
 Alternatively go to windows task scheduler / linux cron job (use the same command at the top) set a time interval of 5 , 6 or 10 min to run this task automatically.
+![Screenshot-jobstarted-maxattempts-hit](https://github.com/user-attachments/assets/ac3c75de-f7ed-49d0-b8f0-2a3ea8c33c33)
 
 (To run the background_script.php) - paste below in your cmd 👇\
 php background_script.php
@@ -52,6 +57,10 @@ Dashboard showing Jobs running and their priorities.In addition CRUD functionali
 3rd. run <strong> php artisan server </strong>\
 4th. click on the link to view app\
 
+- import below database schema script (located within the repo)\
+![image](https://github.com/user-attachments/assets/340b96c9-7921-4293-b8cb-ddd7539ca40d)
+ 
+
 ## main page (/)
 The first container is a "myself" click on it ,you will be taken to my LinkedIn Profile\
 The second will take your the "TASK RUNNER LARAVEL APP"
@@ -61,9 +70,11 @@ The second will take your the "TASK RUNNER LARAVEL APP"
 Show the listed jobs running. If it is empty be sure to run this request / url <strong> (http://127.0.0.1:8000/trigger-job) </strong> ❗\
 This will create / trigger a job and write to the \
 Here you view logs of that specific Job cancel it
-![image](https://github.com/user-attachments/assets/340b96c9-7921-4293-b8cb-ddd7539ca40d)
+![Screenshot-dashboard](https://github.com/user-attachments/assets/bd05b177-08a0-487a-a470-917adcf08585)
+
 
 ## dashboard page (/jobs/<id>/view-log)
 This seconds show more information about that specific JOB Task
+![Screenshot-view-log](https://github.com/user-attachments/assets/848353c5-86ce-4c98-bd3f-eabf35d5a476)
 
 
