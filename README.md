@@ -17,13 +17,13 @@ It will log the results and parameters on laravels build in log file within stor
 ![Screenshot-screenshoot-number-one](https://github.com/user-attachments/assets/e29edcec-162c-4ef1-885e-73f63af14935)
 
 ## task 2 
-This task is complete. I created a a helper class / function that is called <i>runBackgroundJob</i> , it executes in the background. Use the below command to test.\
+This task is complete. I created a helper class / function that is called <i>runBackgroundJob</i> , it executes in the background. Use the below command to test\
 
 php artisan background:job "App\Jobs\TestJob" "performTask" '{"param1":"value1", "param2":"value2"}' 3 
 
 ## task 3 error handling etc
 
-I create a separate log file using Laravels "log::channel" it successfully logs the error on the  background_jobs_errors\
+I create a separate log file using Laravels "log::channel" it successfully logs the error on the  background_jobs_errors.log\
 The check is being done. Logs status and timestamped.
 ![Screenshot-jobstarted-maxattempts-hit](https://github.com/user-attachments/assets/c571fad3-b0cd-417e-b6da-126141fde372)
 
@@ -36,7 +36,7 @@ I have a <i>App\Jobs\TestJob </i> with the performTask method in <B>config/backg
 ## more on usage 👨‍🏫
 
 The below command can be modified anyhow. You can change the className to trigger a log file if the class exits or not. Same with the "method" / "parameters". The last digit at the end\
-is for <p style="background:limeGreen">The Attempts</p> OVER 3 it will trigger an a log file with a <i>Job permanently failed after max attempts</i>\
+is for <p style="background:lime">The Attempts</p> OVER 3 it will trigger an a log file with a <i>Job permanently failed after max attempts</i>\
 
 Typically theb file "laravel.log" will log any information from the Log::debug\
 Another file called "background_jobs_errors.log" will log errors from the command.
