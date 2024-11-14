@@ -54,7 +54,7 @@ Dashboard showing Jobs running and their priorities.In addition CRUD functionali
 
 1st. Go to env file: write easypeasy as database. Put your user and password\
 2nd. run php artisan migrate\
-3rd. run <strong> php artisan server </strong>\
+3rd. run <strong> php artisan serve </strong>\
 4th. click on the link to view app\
 
 - import below database schema script (located within the repo)\
