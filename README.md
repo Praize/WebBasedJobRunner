@@ -11,7 +11,7 @@ This is the custom background runner making use of vanilla PHP. It makes use of 
 
 All you need to do is:
 (To run the background_script.php) - paste below in your cmd 👇\
-php background_script.php
+Navigate to where the script resides then (php background_script.php)
 
 It will log the results and parameters on laravels build in log file within storage.It logs successfully. Try it out 😊
 ![Screenshot-screenshoot-number-one](https://github.com/user-attachments/assets/e29edcec-162c-4ef1-885e-73f63af14935)
