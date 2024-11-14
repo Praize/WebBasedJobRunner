@@ -45,8 +45,15 @@ Alternatively go to windows task scheduler / linux cron job (use the same comman
 php background_script.php
 
 # WebBasedJobRunner ⚙️🌍 (Dashboard)
-Dashboard showing Jobs running and their priorities.In addition CRUD functionality is implemented for the Admin to make necessarry changes where needed.
+Dashboard showing Jobs running and their priorities.In addition CRUD functionality is implemented for the Admin to make necessarry changes where needed.\
 
+1st. run <strong> php artisan server </strong>\
+
+## main page (/)
+The first container is a "myself" click on it ,you will be taken to my LinkedIn Profile\
+The second will take your the "TASK RUNNER LARAVEL APP"
+
+![Screenshot-front ](https://github.com/user-attachments/assets/995e41e4-5701-452f-a431-5f60f97441c5)
 
 
 
