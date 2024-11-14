@@ -69,12 +69,12 @@ The second will redirect you to the "TASK RUNNER LARAVEL APP"
 ## dashboard page (/jobs)
 Show the listed jobs running. If it is empty be sure to run this request / url <strong> (http://127.0.0.1:8000/trigger-job) </strong> ❗\
 This will create / trigger a job and write to the jobs table\
-Here you view logs for that specific Job and can cancel it
+Here you view all or can cancel that specifc Job
 ![Screenshot-dashboard](https://github.com/user-attachments/assets/bd05b177-08a0-487a-a470-917adcf08585)
 
 
 ## dashboard page (/jobs/<id>/view-log)
-This seconds show more information about that specific JOB Task
+This seconds show more information about that specific JOB Task (View logs)
 ![Screenshot-view-log](https://github.com/user-attachments/assets/848353c5-86ce-4c98-bd3f-eabf35d5a476)
 
 
