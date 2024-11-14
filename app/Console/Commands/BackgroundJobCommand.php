@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
-
+use Illuminate\Support\Facades\Config;
 class BackgroundJobCommand extends Command
 {
     protected $signature = 'background:job {className} {method} {paramsJson} {maxAttempts=3}';
@@ -17,6 +17,17 @@ class BackgroundJobCommand extends Command
         $params = json_decode($this->argument('paramsJson'), true);
         $maxAttempts = (int) $this->argument('maxAttempts');
         $attempts = 0;
+
+        # Validate class and method names against whitelist
+        $allowedClasses = Config::get('background_jobs.allowed_classes');
+
+        if (!array_key_exists($className, $allowedClasses) || !in_array($method, $allowedClasses[$className])) {
+            Log::warning("Unauthorized job execution attempt", [
+                'class' => $className,
+                'method' => $method,
+            ]);
+            throw new \Exception("Unauthorized job: {$className}::{$method}");
+        }
 
         Log::info("Job started", [
             'class' => $className,

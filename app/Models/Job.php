@@ -12,6 +12,14 @@ class Job extends Model
     protected $table = 'jobs';
 
     protected $fillable = [
-        'priority', 'delay', 'status', 'attempts', 'failed_at'
+
+        'queue',
+        'payload',
+        'reserved_at',
+        'priority', 
+        'delay', 
+        'created_at', 
+        'attempts', 
+        'available_at'
     ];
 }

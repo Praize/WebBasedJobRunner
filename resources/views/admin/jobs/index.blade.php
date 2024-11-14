@@ -4,9 +4,9 @@
 @section('title',"Easy Peasy")
 <div class="container">
 @section('content')
-<h1 class="bg-dark text-white p-5">Job Dashboard 🔃</h1>
+<h1 class="bg-dark text-white p-5 display-4">Job Dashboard 🔃</h1>
 
-<table class="table">
+<table class="table table caption-top">
     <thead>
         <tr>
             <th>ID</th>
@@ -21,15 +21,16 @@
         @foreach($jobs as $job)
             <tr>
                 <td>{{ $job->id }}</td>
-                <td>{{ $job->failed_at ? 'Failed' : 'Running' }}</td>
+                <td>{{ $job->available_at ? 'Failed' : 'Running' }}</td>
                 <td>{{ $job->priority }}</td>
                 <td>{{ $job->attempts }}</td>
                 <td>{{ $job->delay }}</td>
                 <td>
-                    <a href="{{ route('admin.jobs.view_log', $job->id) }}">View Log</a>
+                    <a class="btn btn-link" href="{{ route('admin.jobs.view_log', $job->id) }}">View Log</a>
                     <form action="{{ route('admin.jobs.cancel', $job->id) }}" method="POST" style="display:inline;">
                         @csrf
-                        <button type="submit">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Cancel</button>
+
                     </form>
                 </td>
             </tr>

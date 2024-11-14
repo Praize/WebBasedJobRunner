@@ -10,11 +10,24 @@ use Illuminate\Support\Facades\Log;
  * @param array $params The parameters to pass to the method.
  * @return void
  */
-function runBackgroundJob($className, $method, $params = [])
+function runBackgroundJob($className, $method, $params = [], $maxAttempts = 3)
 {
+
+     # Load approved classes from config
+     $allowedClasses = config('background_jobs.allowed_classes');
+
+     # Validate that the class and method are approved
+     if (!array_key_exists($className, $allowedClasses) || !in_array($method, $allowedClasses[$className])) {
+         Log::warning("Unauthorized job attempt", [
+             'class' => $className,
+             'method' => $method,
+         ]);
+         throw new \Exception("Unauthorized background job: {$className}::{$method}.");
+     }
+
     # Encode parameters as JSON so they can be passed as a single argument
     $paramsJson = json_encode($params);
-    
+     
     # Determine the PHP executable path
     $phpPath = PHP_BINARY;
     $artisanPath = base_path('artisan');
