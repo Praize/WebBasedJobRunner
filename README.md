@@ -62,14 +62,14 @@ Dashboard showing Jobs running and their priorities.In addition CRUD functionali
  
 
 ## main page (/)
-The first container is a "myself" click on it ,you will be taken to my LinkedIn Profile\
-The second will take your the "TASK RUNNER LARAVEL APP"
+The first container is a "myself" - click on it. You will be taken to my LinkedIn Profile\
+The second will redirect you to the "TASK RUNNER LARAVEL APP"
 ![Screenshot-front ](https://github.com/user-attachments/assets/995e41e4-5701-452f-a431-5f60f97441c5)
 
 ## dashboard page (/jobs)
 Show the listed jobs running. If it is empty be sure to run this request / url <strong> (http://127.0.0.1:8000/trigger-job) </strong> ❗\
-This will create / trigger a job and write to the \
-Here you view logs of that specific Job cancel it
+This will create / trigger a job and write to the jobs table\
+Here you view logs for that specific Job and can cancel it
 ![Screenshot-dashboard](https://github.com/user-attachments/assets/bd05b177-08a0-487a-a470-917adcf08585)
 
 
