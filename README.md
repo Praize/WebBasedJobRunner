@@ -36,7 +36,7 @@ I have a <i>App\Jobs\TestJob </i> with the performTask method in <B>config/backg
 ## more on usage 👨‍🏫
 
 The below command can be modified anyhow. You can change the className to trigger a log file if the class exits or not. Same with the "method" / "parameters". The last digit at the end\
-is for <p style="background:lime">The Attempts</p> OVER 3 it will trigger an a log file with a <i>Job permanently failed after max attempts</i>\
+is forThe Attempts - OVER 3 it will trigger an a log file with a <i>Job permanently failed after max attempts</i>\
 
 Typically theb file "laravel.log" will log any information from the Log::debug\
 Another file called "background_jobs_errors.log" will log errors from the command.
