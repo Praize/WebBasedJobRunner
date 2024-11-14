@@ -74,7 +74,7 @@ Here you view all or can cancel that specifc Job
 
 
 ## dashboard page (/jobs/<id>/view-log)
-This seconds show more information about that specific JOB Task (View logs)
+This shows more information about that specific JOB Task (View logs)
 ![Screenshot-view-log](https://github.com/user-attachments/assets/848353c5-86ce-4c98-bd3f-eabf35d5a476)
 
 
