@@ -44,16 +44,26 @@ Alternatively go to windows task scheduler / linux cron job (use the same comman
 (To run the background_script.php) - paste below in your cmd 👇\
 php background_script.php
 
-# WebBasedJobRunner ⚙️🌍 (Dashboard)
+# WebBasedJobRunner ⚙️🌍 (Dashboard "ADVANCE") 
 Dashboard showing Jobs running and their priorities.In addition CRUD functionality is implemented for the Admin to make necessarry changes where needed.\
 
-1st. run <strong> php artisan server </strong>\
+1st. Go to env file: write easypeasy as database. Put your user and password\
+2nd. run php artisan migrate\
+3rd. run <strong> php artisan server </strong>\
+4th. click on the link to view app\
 
 ## main page (/)
 The first container is a "myself" click on it ,you will be taken to my LinkedIn Profile\
 The second will take your the "TASK RUNNER LARAVEL APP"
-
 ![Screenshot-front ](https://github.com/user-attachments/assets/995e41e4-5701-452f-a431-5f60f97441c5)
 
+## dashboard page (/jobs)
+Show the listed jobs running. If it is empty be sure to run this request / url <strong> (http://127.0.0.1:8000/trigger-job) </strong> ❗\
+This will create / trigger a job and write to the \
+Here you view logs of that specific Job cancel it
+![image](https://github.com/user-attachments/assets/340b96c9-7921-4293-b8cb-ddd7539ca40d)
+
+## dashboard page (/jobs/<id>/view-log)
+This seconds show more information about that specific JOB Task
 
 
